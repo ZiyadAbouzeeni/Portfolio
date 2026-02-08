@@ -38,7 +38,7 @@ function App() {
                 <div className="hero-buttons">
                     <a
                         href="/Ziyad_Abouzeeni_Resume.pdf"
-                        className="button is-primary"
+                        className="button primary"
                         target="_blank"
                         rel="noopener noreferrer"
                        >
@@ -52,9 +52,10 @@ function App() {
 
             <section id="projects">
                 <h2 className="projects-title">Projects</h2>
-                <p style={{color:'white', fontSize:'2rem', marginBottom:'2rem'}}></p>
-                This is my only project for now, there will be more to come soon.
 
+                <p style={{color:'white', fontSize:'2rem', marginBottom:'2rem'}}>
+                This is my only project for now-more to come soon.
+                </p>
                 {projects.map((project, index) => (
                     <div key={index} className="project">
                         <h3>
@@ -64,7 +65,7 @@ function App() {
                                 rel="noopener noreferrer"
                                 style={{ color: 'white', textDecoration: 'none' }}
                                 >
-                                {project.name}
+                                {project.title}
                             </a>
                         </h3>
                         <p>{project.description}</p>
@@ -120,14 +121,14 @@ function App() {
 
             <section id="contact">
                 <h2 className="section-title">Contact</h2>
-                <p> style={{ color: 'white', fontSize:'2rem', marginBottom:'2rem'}}
+                <p style={{ color: 'white', fontSize:'2rem', marginBottom:'2rem'}}>
                     Contact me!
                 </p>
 
                 <ul className="contacts">
 
                     <li>
-                        <a href="email:ziyad_azeeni@hotmail.com">
+                        <a href="malito:ziyad_azeeni@hotmail.com">
                             ziyad_azeeni@hotmail.com
                         </a>
                     </li>
