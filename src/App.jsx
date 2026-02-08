@@ -95,7 +95,15 @@ function App() {
 
             <section id="experience">
                 <h2 className="section-title">Experience & Education</h2>
-                <p>Coming soon...</p>
+
+                <div className="experiences">
+                    <div className="experiences-section">
+                        <h3>University of Windsor</h3>
+                        <p className="experiences-description">
+                            Bachelor of Computing Science with Honours Applied Computing
+                        </p>
+                    </div>
+                </div>
             </section>
 
             <section id="contact">
@@ -130,11 +138,6 @@ function App() {
                         >
                             LinkedIn
                         </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href=""
                     </li>
                 </ul>
             </section>
