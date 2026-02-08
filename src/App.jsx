@@ -39,13 +39,58 @@ function App() {
             </section>
 
             <section id="projects">
-                <h2 className="section-title">Projects</h2>
-                <p>Coming soon...</p>
+                <h2 className="projects-title">Projects</h2>
+                <p style={{color:'white', fontSize:'2rem', marginBottom:'2rem'}}></p>
+                This is my only project for now, there will be more to come soon.
+
+                {projects.map((project, index) => (
+                    <div key={index} className="project">
+                        <h3>
+                            <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: 'white', textDecoration: 'none' }}
+                                >
+                                {project.name}
+                            </a>
+                        </h3>
+                        <p>{project.description}</p>
+
+                        <ul>
+                            {project.tech.map((item, i) => (
+                                <li key={i}>{item}</li>
+                                ))}
+                        </ul>
+                    </div>
+                ))}
             </section>
 
             <section id="skills">
                 <h2 className="section-title">Skills</h2>
-                <p>Coming soon...</p>
+
+                <div className="skills">
+                    <div className="skills-section">
+                        <ul>
+                        <h3>Language</h3>
+                        <li>C/C++</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>HTML</li>
+                        </ul>
+                    </div>
+
+                    <div className="skills-section">
+                        <h3>Tools</h3>
+                            <ul>
+                                <li>React</li>
+                                <li>Redux</li>
+                                <li>Vite</li>
+                                <li>Git & GitHub</li>
+                            </ul>
+                    </div>
+                </div>
             </section>
 
             <section id="experience">

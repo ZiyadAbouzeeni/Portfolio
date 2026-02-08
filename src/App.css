@@ -154,3 +154,26 @@ section {
     background: #111827;
     border: 1px solid #1f2933;
 }
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-group h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #e5e7eb;
+}
+
+.skill-group ul {
+    list-style: none;
+}
+
+.skill-group li {
+    font-size: 0.85rem;
+    color: #d1d5db;
+    margin-bottom: 0.35rem;
+}
