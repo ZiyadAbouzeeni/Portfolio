@@ -100,7 +100,43 @@ function App() {
 
             <section id="contact">
                 <h2 className="section-title">Contact</h2>
-                <p>Coming soon...</p>
+                <p> style={{ color: 'white', fontSize:'2rem', marginBottom:'2rem'}}>
+                    Contact me!
+                </p>
+
+                <ul className="contacts">
+
+                    <li>
+                        <a href="email:ziyad_azeeni@hotmail.com">
+                            ziyad_azeeni@hotmail.com
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://github.com/ZiyadAbouzeeni"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                        GitHub
+                    </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/ziyadabouzeeni/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href=""
+                    </li>
+                </ul>
             </section>
         </div>
     );
@@ -117,6 +153,5 @@ const projects = [
         link: "https://github.com/ZiyadAbouzeeni",
     },
 ]
-
 
 export default App;
