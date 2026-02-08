@@ -1,5 +1,17 @@
 import "./App.css";
 
+const projects = [
+    {
+        title: "Personal Portfolio",
+        description:
+            "My first ever solo coding journey. My portfolio assigned" +
+            "to show off my creative and diverse skills. This is where" +
+            "I will continue to update and show my future projects.",
+        tech: ["React", "Javascript", "Vite", "CSS"],
+        link: "https://github.com/ZiyadAbouzeeni",
+    },
+]
+
 function App() {
     const name = "Ziyad Abouzeeni";
     const title = "Computer Science - Applied Computing Student";
@@ -108,7 +120,7 @@ function App() {
 
             <section id="contact">
                 <h2 className="section-title">Contact</h2>
-                <p> style={{ color: 'white', fontSize:'2rem', marginBottom:'2rem'}}>
+                <p> style={{ color: 'white', fontSize:'2rem', marginBottom:'2rem'}}
                     Contact me!
                 </p>
 
@@ -144,17 +156,5 @@ function App() {
         </div>
     );
 }
-
-const projects = [
-    {
-        title: "Personal Portfolio",
-        description:
-            "My first ever solo coding journey. My portfolio assigned" +
-            "to show off my creative and diverse skills. This is where" +
-            "I will continue to update and show my future projects.",
-        tech: ["React", "Javascript", "Vite", "CSS"],
-        link: "https://github.com/ZiyadAbouzeeni",
-    },
-]
 
 export default App;
