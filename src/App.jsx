@@ -1,7 +1,7 @@
 import "./App.css";
 
 function App() {
-    const name = "Your Name";
+    const name = "Ziyad Abouzeeni";
     const title = "Computer Science - Applied Computing Student";
     const tagline = "Aspiring software developer interested in web development, systems, and problem solving.";
 
@@ -24,14 +24,20 @@ function App() {
                 <p className="hero-text">{tagline}</p>
 
                 <div className="hero-buttons">
-                    <button className="button primary">Download Resume</button>
+                    <a
+                        href="/Ziyad_Abouzeeni_Resume.pdf"
+                        className="button is-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                       >
+                        Download Resume
+                    </a>
                     <a href="#contact" className="button ghost">
                         Contact Me
                     </a>
                 </div>
             </section>
 
-            {/* We’ll fill these in next */}
             <section id="projects">
                 <h2 className="section-title">Projects</h2>
                 <p>Coming soon...</p>
@@ -54,5 +60,18 @@ function App() {
         </div>
     );
 }
+
+const projects = [
+    {
+        title: "Personal Portfolio",
+        description:
+            "My first ever solo coding journey. My portfolio assigned" +
+            "to show off my creative and diverse skills. This is where" +
+            "I will continue to update and show my future projects.",
+        tech: ["React", "Javascript", "Vite", "CSS"],
+        link: "https://github.com/ZiyadAbouzeeni",
+    },
+]
+
 
 export default App;
