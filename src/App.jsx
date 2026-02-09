@@ -129,7 +129,7 @@ function App() {
 
                     <li>
                         <a href="malito:ziyad_azeeni@hotmail.com">
-                            ziyad_azeeni@hotmail.com
+                            Email
                         </a>
                     </li>
 
