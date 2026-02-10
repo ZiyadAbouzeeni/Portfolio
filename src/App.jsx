@@ -6,7 +6,7 @@ const projects = [
         description: "My first ever solo coding journey. My portfolio designed to show off my creative and diverse skills. This is where I will continue to update and show my future projects.",
         tech: ["React", "JavaScript", "Vite", "CSS"],
         link: "https://github.com/ZiyadAbouzeeni",
-        github: "https://github.com/ZiyadAbouzeeni" // Added separate GitHub link
+        github: "https://github.com/ZiyadAbouzeeni"
     },
 ];
 
@@ -154,15 +154,44 @@ function App() {
 
                 <div className="experience-grid">
                     <article className="experience-card">
-                        <h3 className="experience-title">University of Windsor</h3>
-                        <p className="experience-period">2023 - Present</p>
+                        <div className="experience-header">
+                            <div className="experience-title-container">
+                                <h3 className="experience-title">University of Windsor</h3>
+                                <p className="experience-period">2023 - Present</p>
+                            </div>
+                            <img
+                                src="/uwindsorpicc.png"
+                                alt="University of Windsor Logo"
+                                className="experience-logo"
+                            />
+                        </div>
                         <p className="experience-description">
                             Bachelor of Computing Science with Honours Applied Computing
                         </p>
                         <ul className="experience-details">
                             <li>Specializing in software development</li>
                             <li>Expected graduation: 2027</li>
-                            <li>GPA: 3.8/4.0</li>
+                        </ul>
+                    </article>
+
+                    <article className="experience-card">
+                        <div className="experience-header">
+                            <div className="experience-title-container">
+                                <h3 className="experience-title">Udemy</h3>
+                                <p className="experience-period">2025 (Asynchronous)</p>
+                            </div>
+                            <img
+                                src="/udemy1.webp"
+                                alt="Udemy Logo"
+                                className="experience-logo"
+                            />
+                        </div>
+                        <p className="experience-description">
+                            Full-Stack Web Developer Certification 2025
+                        </p>
+                        <ul className="experience-details">
+                            <li>Completed comprehensive web development course</li>
+                            <li>Mastered modern full-stack technologies</li>
                         </ul>
                     </article>
                 </div>
@@ -170,7 +199,7 @@ function App() {
 
             {/* Contact Section */}
             <section id="contact" className="section" aria-labelledby="contact-heading">
-                <h2 id="contact-heading" className="section-title">Get In Touch</h2>
+                <h2 id="contact-heading" className="section-title">Get In Touch With Me!</h2>
                 <p className="contact-subtitle">
                     I&apos;m currently looking for internship opportunities and would love to connect!
                 </p>
