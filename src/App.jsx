@@ -10,6 +10,22 @@ const projects = [
     },
 ];
 
+const skills = {
+    languages: [
+        { name: "C/C++", logo: "/cplusplus-logo.png" },
+        { name: "Python", logo: "/python-logo.png" },
+        { name: "Java", logo: "/java-logo.webp" },
+        { name: "JavaScript", logo: "/javascript-logo.png" },
+        { name: "HTML/CSS", logo: "/html-css-logo.png" }
+    ],
+    tools: [
+        { name: "React", logo: "/react-logo.png" },
+        { name: "Vite", logo: "/vite-logo.png" },
+        { name: "Git & GitHub", logo: "/githublogo.png" },
+        { name: "Node.js", logo: "/nodejs-logo.png" }
+    ]
+};
+
 function App() {
     const name = "Ziyad Abouzeeni";
     const title = "Computer Science - Applied Computing Student";
@@ -45,9 +61,6 @@ function App() {
                                 rel="noopener noreferrer"
                             >
                                 Download Resume
-                            </a>
-                            <a href="#contact" className="button ghost">
-                                Contact Me
                             </a>
                         </div>
                     </div>
@@ -96,19 +109,10 @@ function App() {
 
                             <div className="project-links">
                                 <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="button small"
-                                    aria-label={`View ${project.title} live demo (opens in new tab)`}
-                                >
-                                    Live Demo
-                                </a>
-                                <a
                                     href={project.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="button small ghost"
+                                    className="button primary"
                                     aria-label={`View ${project.title} source code on GitHub (opens in new tab)`}
                                 >
                                     GitHub
@@ -126,24 +130,34 @@ function App() {
                 <div className="skills-container">
                     <div className="skills-category">
                         <h3 className="skills-category-title">Languages</h3>
-                        <ul className="skills-list" aria-label="Programming languages">
-                            <li className="skill-item">C/C++</li>
-                            <li className="skill-item">Python</li>
-                            <li className="skill-item">Java</li>
-                            <li className="skill-item">JavaScript</li>
-                            <li className="skill-item">HTML/CSS</li>
-                        </ul>
+                        <div className="skills-logos-grid">
+                            {skills.languages.map((skill, index) => (
+                                <div key={index} className="skill-logo-item">
+                                    <img
+                                        src={skill.logo}
+                                        alt={skill.name}
+                                        className="skill-logo"
+                                    />
+                                    <span className="skill-logo-label">{skill.name}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
                     <div className="skills-category">
                         <h3 className="skills-category-title">Tools & Frameworks</h3>
-                        <ul className="skills-list" aria-label="Tools and frameworks">
-                            <li className="skill-item">React</li>
-                            <li className="skill-item">Redux</li>
-                            <li className="skill-item">Vite</li>
-                            <li className="skill-item">Git & GitHub</li>
-                            <li className="skill-item">Node.js</li>
-                        </ul>
+                        <div className="skills-logos-grid">
+                            {skills.tools.map((skill, index) => (
+                                <div key={index} className="skill-logo-item">
+                                    <img
+                                        src={skill.logo}
+                                        alt={skill.name}
+                                        className="skill-logo"
+                                    />
+                                    <span className="skill-logo-label">{skill.name}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
