@@ -233,8 +233,10 @@ function App() {
                                 className="contact-link email"
                                 aria-label="Send email to Ziyad"
                             >
-                                <span className="contact-icon">📧</span>
-                                <span>Email</span>
+                                <img src="/emaillogo.jpg"
+                                     alt="Email Logo"
+                                     className="contact-icon"
+                                />
                             </a>
                         </li>
                         <li className="contact-item">
@@ -245,8 +247,10 @@ function App() {
                                 className="contact-link github"
                                 aria-label="Visit GitHub profile (opens in new tab)"
                             >
-                                <span className="contact-icon">💻</span>
-                                <span>GitHub</span>
+                                <img src="/githublogo.png"
+                                     alt="GitHub Logo"
+                                     className="contact-icon"
+                                />
                             </a>
                         </li>
                         <li className="contact-item">
@@ -257,8 +261,10 @@ function App() {
                                 className="contact-link linkedin"
                                 aria-label="Visit LinkedIn profile (opens in new tab)"
                             >
-                                <span className="contact-icon">💼</span>
-                                <span>LinkedIn</span>
+                                <img src="/logolinkedin.avif"
+                                     alt="LinkedIn Logo"
+                                     className="contact-icon"
+                                />
                             </a>
                         </li>
                     </ul>

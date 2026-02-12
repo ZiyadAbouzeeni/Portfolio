@@ -573,8 +573,12 @@ section {
 }
 
 .contact-icon {
-    font-size: 1.25rem;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    transition: all 0.3s ease;
 }
+
 
 /* Footer */
 .footer {
