@@ -120,7 +120,7 @@ function App() {
 
                         <div className="hero-buttons">
                             <a
-                                href="/Ziyad_Abouzeeni_Resume.pdf"
+                                href="/My_Resume.pdf"
                                 className="button primary"
                                 target="_blank"
                                 rel="noopener noreferrer"
