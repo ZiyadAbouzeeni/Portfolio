@@ -21,6 +21,13 @@ const projects = [
         link: "https://github.com/ZiyadAbouzeeni",
         github: "https://github.com/ZiyadAbouzeeni",
     },
+    {
+        title: "Solar System Simulator",
+        description:
+            "A 3D simulation of the solar system in C++!",
+        link: "https://github.com/ZiyadAbouzeeni/Solar-System.git",
+        github: "https://github.com/ZiyadAbouzeeni",
+    },
 ];
 
 const skills = {
