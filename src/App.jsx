@@ -16,17 +16,18 @@ const projects = [
     {
         title: "Personal Portfolio",
         description:
-            "My first ever solo coding journey. My portfolio designed to show off my creative and diverse skills. This is where I will continue to update and show my future projects.",
+            "A personal portfolio website built to showcase my projects, technical skills, and experience through a clean, responsive interface.",
         tech: ["React", "JavaScript", "Vite", "CSS"],
-        link: "https://github.com/ZiyadAbouzeeni",
-        github: "https://github.com/ZiyadAbouzeeni",
+        link: "https://github.com/ZiyadAbouzeeni/Portfolio",
+        github: "https://github.com/ZiyadAbouzeeni/Portfolio",
     },
     {
-        title: "Solar System Simulator",
+        title: "Solar System Simulation",
         description:
-            "A 3D simulation of the solar system in C++!",
-        link: "https://github.com/ZiyadAbouzeeni/Solar-System.git",
-        github: "https://github.com/ZiyadAbouzeeni",
+            "A 3D solar system simulation built in C++ using OpenGL, featuring planetary motion, orbit paths, and interactive camera controls for zooming, panning, and navigation.",
+        tech: ["C++", "OpenGL", "GLFW", "GLM"],
+        link: "https://github.com/ZiyadAbouzeeni/Solar-System",
+        github: "https://github.com/ZiyadAbouzeeni/Solar-System",
     },
 ];
 
@@ -77,7 +78,11 @@ function SkillsCategory({ title, items }) {
             <div className="skills-logos-grid">
                 {items.map((skill) => (
                     <div key={skill.name} className="skill-logo-item">
-                        <img src={`${BASE}${skill.logo}`} alt={skill.name} className="skill-logo" />
+                        <img
+                            src={`${BASE}${skill.logo}`}
+                            alt={skill.name}
+                            className="skill-logo"
+                        />
                         <span className="skill-logo-label">{skill.name}</span>
                     </div>
                 ))}
@@ -94,7 +99,11 @@ function ContactItem({ href, className, aria, img, targetBlank }) {
     return (
         <li className="contact-item">
             <a href={href} className={className} aria-label={aria} {...linkProps}>
-                <img src={`${BASE}${img.src}`} alt={img.alt} className="contact-icon" />
+                <img
+                    src={`${BASE}${img.src}`}
+                    alt={img.alt}
+                    className="contact-icon"
+                />
             </a>
         </li>
     );
@@ -126,7 +135,7 @@ function App() {
 
                         <div className="hero-buttons">
                             <a
-                                href={`${BASE}My_Resume.pdf`}
+                                href={`${BASE}Updated_Resume.pdf`}
                                 className="button primary"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -150,7 +159,9 @@ function App() {
                 <h2 id="projects-heading" className="section-title">
                     Projects
                 </h2>
-                <p className="section-subtitle">This is my first project—more to come soon!</p>
+                <p className="section-subtitle">
+                    A selection of projects that highlight my development experience and technical skills.
+                </p>
 
                 <div className="projects-grid">
                     {projects.map((project) => (
@@ -250,7 +261,9 @@ function App() {
                                 className="experience-logo"
                             />
                         </div>
-                        <p className="experience-description">Full-Stack Web Developer Certification 2025</p>
+                        <p className="experience-description">
+                            Full-Stack Web Developer Certification 2025
+                        </p>
                         <ul className="experience-details">
                             <li>Completed comprehensive web development course</li>
                             <li>Mastered modern full-stack technologies</li>
@@ -287,7 +300,9 @@ function App() {
                 <p className="footer-text">
                     &copy; {new Date().getFullYear()} Ziyad Abouzeeni. Built with React.
                 </p>
-                <p className="footer-note">This portfolio is continuously updated with new projects.</p>
+                <p className="footer-note">
+                    This portfolio is continuously updated with new projects.
+                </p>
             </footer>
         </div>
     );
