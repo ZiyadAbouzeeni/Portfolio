@@ -3,6 +3,7 @@ import "./App.css";
 const NAME = "Ziyad Abouzeeni";
 const TITLE = "Computer Science - Applied Computing Student";
 const TAGLINE = "A software developer interested in web development!";
+const BASE = import.meta.env.BASE_URL;
 
 const NAV_LINKS = [
     { href: "#projects", label: "Projects", aria: "View projects" },
@@ -24,18 +25,18 @@ const projects = [
 
 const skills = {
     languages: [
-        { name: "C/C++", logo: "/cplusplus-logo.png" },
-        { name: "Python", logo: "/python-logo.png" },
-        { name: "Java", logo: "/java-logo.webp" },
-        { name: "JavaScript", logo: "/javascript-logo.png" },
-        { name: "HTML/CSS", logo: "/hhtml-ccss-logo.webp" },
-        { name: "SQL", logo: "/sql-logo.jpeg" },
+        { name: "C/C++", logo: "cplusplus-logo.png" },
+        { name: "Python", logo: "python-logo.png" },
+        { name: "Java", logo: "java-logo.webp" },
+        { name: "JavaScript", logo: "javascript-logo.png" },
+        { name: "HTML/CSS", logo: "hhtml-ccss-logo.webp" },
+        { name: "SQL", logo: "sql-logo.jpeg" },
     ],
     tools: [
-        { name: "React", logo: "/react-logo.png" },
-        { name: "Vite", logo: "/vite-logo.png" },
-        { name: "Git & GitHub", logo: "/githublogo.png" },
-        { name: "Node.js", logo: "/nodejs-logo.png" },
+        { name: "React", logo: "react-logo.png" },
+        { name: "Vite", logo: "vite-logo.png" },
+        { name: "Git & GitHub", logo: "githublogo.png" },
+        { name: "Node.js", logo: "nodejs-logo.png" },
     ],
 };
 
@@ -44,21 +45,21 @@ const contacts = [
         href: "mailto:ziyad_azeeni@hotmail.com",
         className: "contact-link email",
         aria: "Send email to Ziyad",
-        img: { src: "/emaillogo.jpg", alt: "Email Logo" },
+        img: { src: "emaillogo.jpg", alt: "Email Logo" },
     },
     {
         href: "https://github.com/ZiyadAbouzeeni",
         className: "contact-link github",
         aria: "Visit GitHub profile (opens in new tab)",
         targetBlank: true,
-        img: { src: "/githublogo.png", alt: "GitHub Logo" },
+        img: { src: "githublogo.png", alt: "GitHub Logo" },
     },
     {
         href: "https://www.linkedin.com/in/ziyadabouzeeni/",
         className: "contact-link linkedin",
         aria: "Visit LinkedIn profile (opens in new tab)",
         targetBlank: true,
-        img: { src: "/logolinkedin.avif", alt: "LinkedIn Logo" },
+        img: { src: "logolinkedin.avif", alt: "LinkedIn Logo" },
     },
 ];
 
@@ -69,7 +70,7 @@ function SkillsCategory({ title, items }) {
             <div className="skills-logos-grid">
                 {items.map((skill) => (
                     <div key={skill.name} className="skill-logo-item">
-                        <img src={skill.logo} alt={skill.name} className="skill-logo" />
+                        <img src={`${BASE}${skill.logo}`} alt={skill.name} className="skill-logo" />
                         <span className="skill-logo-label">{skill.name}</span>
                     </div>
                 ))}
@@ -86,7 +87,7 @@ function ContactItem({ href, className, aria, img, targetBlank }) {
     return (
         <li className="contact-item">
             <a href={href} className={className} aria-label={aria} {...linkProps}>
-                <img src={img.src} alt={img.alt} className="contact-icon" />
+                <img src={`${BASE}${img.src}`} alt={img.alt} className="contact-icon" />
             </a>
         </li>
     );
@@ -95,7 +96,6 @@ function ContactItem({ href, className, aria, img, targetBlank }) {
 function App() {
     return (
         <div className="app">
-            {/* Navigation */}
             <nav className="nav" aria-label="Main navigation">
                 <div className="logo" aria-label="Ziyad Abouzeeni portfolio">
                     {NAME}
@@ -109,7 +109,6 @@ function App() {
                 </div>
             </nav>
 
-            {/* Hero Section */}
             <section id="hero" className="hero">
                 <div className="hero-content">
                     <div className="hero-text-container">
@@ -120,7 +119,7 @@ function App() {
 
                         <div className="hero-buttons">
                             <a
-                                href="/My_Resume.pdf"
+                                href={`${BASE}My_Resume.pdf`}
                                 className="button primary"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -132,7 +131,7 @@ function App() {
 
                     <div className="hero-photo">
                         <img
-                            src="/profilepic.png"
+                            src={`${BASE}profilepic.png`}
                             alt="Ziyad Abouzeeni"
                             className="profile-photo"
                         />
@@ -140,7 +139,6 @@ function App() {
                 </div>
             </section>
 
-            {/* Projects Section */}
             <section id="projects" className="section" aria-labelledby="projects-heading">
                 <h2 id="projects-heading" className="section-title">
                     Projects
@@ -195,7 +193,6 @@ function App() {
                 </div>
             </section>
 
-            {/* Skills Section */}
             <section id="skills" className="section" aria-labelledby="skills-heading">
                 <h2 id="skills-heading" className="section-title">
                     Skills
@@ -207,7 +204,6 @@ function App() {
                 </div>
             </section>
 
-            {/* Experience Section */}
             <section id="experience" className="section" aria-labelledby="experience-heading">
                 <h2 id="experience-heading" className="section-title">
                     Experience & Education
@@ -221,7 +217,7 @@ function App() {
                                 <p className="experience-period">2023 - Present</p>
                             </div>
                             <img
-                                src="/uwindsorpicc.png"
+                                src={`${BASE}uwindsorpicc.png`}
                                 alt="University of Windsor Logo"
                                 className="experience-logo"
                             />
@@ -241,7 +237,11 @@ function App() {
                                 <h3 className="experience-title">Udemy</h3>
                                 <p className="experience-period">2025 (Asynchronous)</p>
                             </div>
-                            <img src="/udemy1.webp" alt="Udemy Logo" className="experience-logo" />
+                            <img
+                                src={`${BASE}udemy1.webp`}
+                                alt="Udemy Logo"
+                                className="experience-logo"
+                            />
                         </div>
                         <p className="experience-description">Full-Stack Web Developer Certification 2025</p>
                         <ul className="experience-details">
@@ -252,7 +252,6 @@ function App() {
                 </div>
             </section>
 
-            {/* Contact Section */}
             <section id="contact" className="section" aria-labelledby="contact-heading">
                 <h2 id="contact-heading" className="section-title">
                     Get In Touch With Me!
@@ -277,7 +276,6 @@ function App() {
                 </div>
             </section>
 
-            {/* Footer */}
             <footer className="footer">
                 <p className="footer-text">
                     &copy; {new Date().getFullYear()} Ziyad Abouzeeni. Built with React.
